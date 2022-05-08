@@ -29,17 +29,17 @@
                 </div>
             </div>
             <ul>
-               <li><a href="index.html">home</a></li> 
-               <li><a href="index.html">movies</a></li> 
-               <li><a href="index.html">tv shows</a></li> 
-               <li><a href="index.html">blogs</a></li> 
+                <li><a href="index.html">home</a></li>
+                <li><a href="index.html">movies</a></li>
+                <li><a href="index.html">tv shows</a></li>
+                <li><a href="index.html">blogs</a></li>
             </ul>
             <figure class="user">
-                <img src="media/hero/login.png" alt="user">
+                <a href="MyProfile.html"><img src="media/hero/login.png" alt="user"></a>
             </figure>
         </nav>
     </header>
-<!-- navbar -->
+    <!-- navbar -->
     <section class="movie-detail-container">
         <div class="movie-detail-wrapper">
             <div class="movie-info">
@@ -47,7 +47,8 @@
                 <p class="name">the adam project</p>
                 <p class="genrall"> Sci-fi Adventure </p>
                 <p class="story">
-                    After accidentally crash-landing in 2022, time-traveling fighter <br> pilot Adam Reed teams up with his
+                    After accidentally crash-landing in 2022, time-traveling fighter <br> pilot Adam Reed teams up with
+                    his
                     12-year-old self for <br> a mission to save the future.
                 </p>
                 <div class="review-box">
@@ -67,10 +68,10 @@
                 <button class="watch"><i class="icofont-ui-play"></i> <span>watch</span></button>
             </div>
             <div class="sub-img">
-               <img src="media/hero/subimage/wp10821335.jpg" alt="">
-               <img src="media/hero/subimage/wp10821336.jpg" alt="">
-               <img src="media/hero/subimage/wp10821342.jpg" alt="">
-               <img src="media/hero/subimage/wp10821346.jpg" alt="">
+                <img src="media/hero/subimage/wp10821335.jpg" alt="">
+                <img src="media/hero/subimage/wp10821336.jpg" alt="">
+                <img src="media/hero/subimage/wp10821342.jpg" alt="">
+                <img src="media/hero/subimage/wp10821346.jpg" alt="">
             </div>
         </div>
     </section>
@@ -78,7 +79,7 @@
         <div class="video-box">
             <i class="icofont-close-circled close"></i>
             <div class="video">
-                <video src="media/trailer/The Adam Project - Official Trailer - Netflix_2.mp4" type="video/mp4" ></video>
+                <video src="media/trailer/The Adam Project - Official Trailer - Netflix_2.mp4" type="video/mp4"></video>
                 <div class="play-icon">
                     <i class="icofont-ui-play play"></i>
                 </div>
@@ -98,7 +99,7 @@
                     <div class="img">
                         <img src="media/movies/letest/l-13.png" alt="">
                         <div class="dw-btn ">
-                           <i class="icofont-ui-play"></i>
+                            <i class="icofont-ui-play"></i>
                         </div>
                     </div>
                     <p class="name">The Adam Project</p>
@@ -217,74 +218,74 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         // -----------------nav bar----------------///
-const ul = document.querySelector("ul");
-console.log(ul);
-const li = document.querySelectorAll("li");
-const toggle = document.querySelector(".toggle");
-toggle.addEventListener("click",()=>{
-  toggle.classList.toggle("active-toggle");
-  ul.classList.toggle("ul-active")
-  li.forEach((item)=>{
-    item.classList.toggle("li-active");
-  })
-})
+        const ul = document.querySelector("ul");
+        console.log(ul);
+        const li = document.querySelectorAll("li");
+        const toggle = document.querySelector(".toggle");
+        toggle.addEventListener("click", () => {
+            toggle.classList.toggle("active-toggle");
+            ul.classList.toggle("ul-active")
+            li.forEach((item) => {
+                item.classList.toggle("li-active");
+            })
+        })
         // prelaer//
-let loader = document.querySelector(".preloader");
-function preloader(){
-  loader.style.display="none";
-}
-preloader();
-// comming soon//
-  var swiper = new Swiper(".related", {
-    effect: "coverflow",
-    // spaceBetween:10,
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 0,
-      modifier: 1,
-      slideShadows: true,
-    },
-    loop:true,
-  });
-        let videoContainer= document.querySelector(".trailer-box")
-        let close =  document.querySelector(".close");
+        let loader = document.querySelector(".preloader");
+        function preloader() {
+            loader.style.display = "none";
+        }
+        preloader();
+        // comming soon//
+        var swiper = new Swiper(".related", {
+            effect: "coverflow",
+            // spaceBetween:10,
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 0,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+        });
+        let videoContainer = document.querySelector(".trailer-box")
+        let close = document.querySelector(".close");
         let watch = document.querySelector(".watch");
         let play = document.querySelector(".play");
         let video = document.querySelector("video");
-        watch.addEventListener("click",()=>{
-            videoContainer.style.display="flex";
-            play.addEventListener("click",()=>{
-                if(video.paused){
+        watch.addEventListener("click", () => {
+            videoContainer.style.display = "flex";
+            play.addEventListener("click", () => {
+                if (video.paused) {
                     video.play()
                     play.classList.remove("icofont-ui-play");
                     play.classList.add("icofont-ui-pause");
-                }else{
+                } else {
                     play.classList.add("icofont-ui-play");
                     play.classList.remove("icofont-ui-pause");
                     video.pause();
                 }
             })
-            close.addEventListener("click",()=>{
-            videoContainer.style.display="none";
+            close.addEventListener("click", () => {
+                videoContainer.style.display = "none";
 
             })
         })
 
         // navbar//
-        window.addEventListener("scroll",()=>{
-  if(document.documentElement.scrollTop>30||document.body.scrollTop>30){
-    console.log("ll")
-    document.querySelector("header").style.background= 'linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))';
-    document.querySelector("header").style.backdropFilter="blur(10px)";
-  }else{
-    document.querySelector("header").style.background="";
-    document.querySelector("header").style.backdropFilter="blur(0px)";
-  }
-})
+        window.addEventListener("scroll", () => {
+            if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
+                console.log("ll")
+                document.querySelector("header").style.background = 'linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8))';
+                document.querySelector("header").style.backdropFilter = "blur(10px)";
+            } else {
+                document.querySelector("header").style.background = "";
+                document.querySelector("header").style.backdropFilter = "blur(0px)";
+            }
+        })
     </script>
 </body>
 
