@@ -1,4 +1,3 @@
-
 var swiper = new Swiper(".home", {
     // spaceBetween: 30,
     centeredSlides: true,
@@ -28,6 +27,7 @@ var swiper = new Swiper(".home", {
     },
     loop:true,
   });
+  
 // comming soon//
   var swiper = new Swiper(".comming-soon", {
     effect: "coverflow",
@@ -62,29 +62,6 @@ var swiper = new Swiper(".home", {
     loop:true,
   });
 // watch button click//
-let videoContainer= document.querySelector(".trailer-box")
-let close =  document.querySelector(".close");
-let watch = document.querySelector(".watch-btn");
-let play = document.querySelector(".play");
-let video = document.getElementById("videoHome");
-watch.addEventListener("click",()=>{
-    videoContainer.style.display="flex";
-    play.addEventListener("click",()=>{
-        if(video.paused){
-            video.play()
-            play.classList.remove("icofont-ui-play");
-            play.classList.add("icofont-ui-pause");
-        }else{
-            play.classList.add("icofont-ui-play");
-            play.classList.remove("icofont-ui-pause");
-            video.pause();
-        }
-    })
-    close.addEventListener("click",()=>{
-    videoContainer.style.display="none";
-    video.pause();
-    })
-})
 
 // prelaer//
 let loader = document.querySelector(".preloader");
@@ -94,17 +71,7 @@ function preloader(){
 preloader();
 
 // -----------------nav bar----------------///
-const ul = document.querySelector("ul");
-console.log(ul);
-const li = document.querySelectorAll("li");
-const toggle = document.querySelector(".toggle");
-toggle.addEventListener("click",()=>{
-  toggle.classList.toggle("active-toggle");
-  ul.classList.toggle("ul-active")
-  li.forEach((item)=>{
-    item.classList.toggle("li-active");
-  })
-})
+
   // movies object (movies)//
 
   const movies = {

@@ -413,7 +413,7 @@ window.onload = () =>{
   filterFunction("all");
 }
 
-
+// scroll
 let scroll = document.querySelector(".scroll");
 window.addEventListener("scroll",()=>{
   if(document.documentElement.scrollTop>50||document.body.scrollTop>50){
