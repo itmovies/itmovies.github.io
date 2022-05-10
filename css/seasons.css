@@ -11,20 +11,25 @@ body{
     max-width: 100%;
 }
 
-li{
-    display:block;
-    list-style: circle;
-    }
     
-.navbar{
+div.navbar{
     height: 100px;
     margin-top: 0px;
     padding-top: 10px;
-    position: relative;
+    display: flex;
+
+    background-color: rgba(0,0,0,0.5);
+    position:fixed;
+    z-index: 3;
+    width: 100%;
 }
 
-nav div a{
+nav div.navbar a{
     display: inline;
+}
+
+div.logo{
+    margin-top: 25px;
 }
 
 a.logo{
@@ -32,8 +37,10 @@ a.logo{
     font-size: 24px;
     text-align: left;
     font-weight: 600;
-    margin-right: 200px;
+    padding-left: 20px;
 }
+
+
 
 ul li a.nav{
     border:0px;
@@ -46,7 +53,11 @@ ul li a.nav{
     position: relative;
     font-weight: 600;
     transition: all .3s ease;
-    
+}
+
+div.navbar ul{
+    position: relative;
+    display: flex;
 }
 div.navbar ul li{
     display: inline-flex;
@@ -66,18 +77,15 @@ figure.user{
 }
 
 img.user{
+    width: 50px;
+    height: 50px;
+}
+
+img.user{
     max-width: 100%;
     object-fit: contain;
 }
 
-div.navbar{
-    background-color: rgba(0,0,0,0.5);
-    z-index: -1;
-    position:fixed;
-    display:flex;
-    z-index: 3;
-    width: 100%;
-}
 
 div.movies{
     padding-top:100px;
@@ -86,19 +94,23 @@ div.movies{
 h1{
     color: #745cfd;
 }
+
+h1 span{
+    font-size: 22px;
+}
 div{
     border: 1px solid white;
     border-style: none;
 }
 
 
-img{
+img.poster{
     height: 250px;
     width: 220px;
     float: left;
 }
 
-img:hover{
+img.poster:hover{
     height: 260px;
     width: 230px
     
@@ -175,6 +187,5 @@ span{
     font-size: 20px;
     font-weight: 600;
  }
-
 
  

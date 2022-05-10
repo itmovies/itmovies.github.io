@@ -9,9 +9,8 @@ body {
   background-color: #101040;
   background-repeat: no-repeat;
   background-size: 100%;
-  object-fit: fill;
+  object-fit:contain;
   width: 100%;
-  display: fixed;
   font-size: 22px;
   color: white;
   font-family: verdana;
@@ -35,7 +34,7 @@ div.login {
 }
 
 
-div.body a.home {
+a.home {
   font-size: 22px;
   border: 0px;
   background-color: red;
